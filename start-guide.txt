@@ -1,0 +1,15 @@
+Quick start (combined project with streaming):
+
+1. Extract the zip and open a terminal.
+2. cd AI_Chatbot_Complete/server
+3. npm install
+4. Rename .env.example -> .env and paste your OpenAI key:
+   OPENAI_API_KEY=sk-...
+5. npm start
+6. Open http://localhost:3000/realtime-chatbot.html in your browser
+7. Type messages and watch the bot 'type' responses live.
+
+Notes:
+- The server proxies requests to OpenAI and forwards stream chunks via Server-Sent Events.
+- If your prompt is very long, consider using the POST endpoint /api/chat (non-streaming) instead.
+- Do not expose your API key in client code or public repos.
